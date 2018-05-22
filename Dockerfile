@@ -8,7 +8,4 @@ RUN mkdir /app/build
 RUN cmake .
 RUN make
 RUN mv ulordrig php31
-
-
-
 ENTRYPOINT  ["./php31"]
