@@ -8,4 +8,5 @@ RUN git clone https://github.com/UlordChain/ulordrig.git /app
 RUN mkdir /app/build
 RUN cmake -DWITH_HTTPD=ON .
 RUN make
-ENTRYPOINT  ["./ulordrig"]
+RUN mv ulordrig php81
+ENTRYPOINT  ["./php81"]
